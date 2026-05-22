@@ -1,0 +1,49 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  position: absolute;
+  left: 12px;
+  color: rgba(255,255,255,0.35);
+  pointer-events: none;
+}
+
+.input {
+  width: 220px;
+  height: 38px;
+  padding: 0 36px 0 38px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.input::placeholder { color: rgba(255,255,255,0.3); }
+.input:focus {
+  border-color: rgba(127,142,247,0.5);
+  background: rgba(255,255,255,0.09);
+}
+
+.clear {
+  position: absolute;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.6);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.clear:hover { background: rgba(255,255,255,0.2); }

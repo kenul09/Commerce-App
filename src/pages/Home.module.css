@@ -1,0 +1,339 @@
+.home {
+  min-height: 100vh;
+  background: #f0f2f8;
+  overflow: hidden;
+  color: #1a1a4e;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.45s ease;
+  filter: blur(3px) brightness(1.1) opacity(0.14);
+  transform: scale(1.08);
+}
+
+.heroBgFade {
+  opacity: 0;
+}
+
+.heroBgOverlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(240, 242, 248, 0.94),
+      rgba(235, 238, 248, 0.86),
+      rgba(238, 235, 252, 0.78)
+    );
+  backdrop-filter: blur(3px);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  padding: 0 6vw;
+  max-width: 620px;
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+
+.contentFade {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(124, 111, 247, 0.18);
+  background: rgba(124, 111, 247, 0.08);
+  backdrop-filter: blur(12px);
+  color: #7c6ff7;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  margin-bottom: 1.8rem;
+}
+
+.heroTitle {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.9;
+  margin-bottom: 1.5rem;
+  min-height: 260px;
+}
+
+.titleLine,
+.titleAccent {
+  width: fit-content;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 4s steps(22) infinite;
+}
+
+.titleLine {
+  font-size: clamp(4rem, 8vw, 7rem);
+  font-weight: 800;
+  letter-spacing: -6px;
+  color: #1a1a4e;
+}
+
+.titleAccent {
+  font-size: clamp(4rem, 8vw, 7rem);
+  font-weight: 800;
+  letter-spacing: -6px;
+  background: linear-gradient(
+    135deg,
+    #7c6ff7 0%,
+    #9b8bf9 45%,
+    #c084fc 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@keyframes typing {
+  0%   { clip-path: inset(0 100% 0 0); }
+  40%  { clip-path: inset(0 0 0 0); }
+  60%  { clip-path: inset(0 0 0 0); }
+  100% { clip-path: inset(0 100% 0 0); }
+}
+
+.heroSub {
+  max-width: 520px;
+  font-size: 1.08rem;
+  color: #6b6897;
+  line-height: 1.9;
+  margin-bottom: 2.4rem;
+}
+
+.heroActions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.ctaPrimary {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 2.2rem;
+  border-radius: 22px;
+  border: none;
+  background: #7c6ff7;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 15px 35px rgba(124, 111, 247, 0.28);
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.ctaPrimary:hover {
+  transform: translateY(-3px);
+  background: #6357e8;
+}
+
+.ctaSecondary {
+  padding: 1rem 2.2rem;
+  border-radius: 22px;
+  border: 1px solid rgba(124, 111, 247, 0.15);
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(18px);
+  color: #4a4878;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.ctaSecondary:hover {
+  background: rgba(255, 255, 255, 0.88);
+  border-color: rgba(124, 111, 247, 0.28);
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.78rem;
+  color: #9490b8;
+}
+
+.counterNum {
+  font-weight: 700;
+  color: #4a4878;
+}
+
+.counterTrack {
+  width: 90px;
+  height: 3px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(124, 111, 247, 0.14);
+}
+
+.counterFill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #7c6ff7, #c084fc);
+  transition: width 0.5s ease;
+}
+
+.heroVisual {
+  position: absolute;
+  right: 5vw;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44vw;
+  max-width: 720px;
+  aspect-ratio: 4/3;
+  border-radius: 36px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  box-shadow:
+    0 25px 60px rgba(26, 26, 78, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+
+.visualFade {
+  opacity: 0;
+  transform: translateY(-50%) scale(0.97);
+}
+
+.visualGlow {
+  position: absolute;
+  inset: -50px;
+  background: radial-gradient(
+    circle at center,
+    rgba(124, 111, 247, 0.14),
+    transparent 70%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.visualImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+}
+
+.dots {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.7rem;
+  z-index: 5;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(124, 111, 247, 0.22);
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.dotActive {
+  background: #7c6ff7;
+  transform: scale(1.5);
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.62);
+  backdrop-filter: blur(18px);
+  color: #4a4878;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(26, 26, 78, 0.08);
+  transition: 0.25s ease;
+}
+
+.arrow:hover {
+  transform: translateY(-50%) scale(1.08);
+  background: rgba(124, 111, 247, 0.14);
+}
+
+.arrowLeft  { left: 1.8rem; }
+.arrowRight { right: 1.8rem; }
+
+@media (max-width: 992px) {
+  .heroVisual {
+    width: 42vw;
+  }
+
+  .titleLine,
+  .titleAccent {
+    font-size: clamp(3rem, 7vw, 5rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .heroVisual { display: none; }
+
+  .heroContent {
+    max-width: 100%;
+    padding: 0 1.5rem;
+  }
+
+  .heroActions  { justify-content: center; }
+  .counter      { justify-content: center; }
+
+  .titleLine,
+  .titleAccent {
+    font-size: clamp(3rem, 14vw, 4.5rem);
+  }
+
+  .heroSub { font-size: 1rem; }
+
+  .arrow {
+    width: 50px;
+    height: 50px;
+  }
+}

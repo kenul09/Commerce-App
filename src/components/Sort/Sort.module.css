@@ -1,0 +1,36 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.select {
+  height: 38px;
+  padding: 0 36px 0 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.75);
+  font-size: 0.875rem;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  transition: border-color 0.2s;
+}
+
+.select:focus { border-color: rgba(127,142,247,0.5); }
+.select option { background: #1a1a2e; color: #fff; }
+
+.reset {
+  position: absolute;
+  right: 8px;
+  border: none;
+  background: none;
+  color: rgba(255,255,255,0.45);
+  cursor: pointer;
+  font-size: 0.7rem;
+  padding: 2px 4px;
+  transition: color 0.2s;
+}
+
+.reset:hover { color: #fff; }
