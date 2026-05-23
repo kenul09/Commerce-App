@@ -1,0 +1,175 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "favorites": "Favorites",
+    "basket": "Basket"
+  },
+
+  "home": {
+    "slides": [
+      {
+        "title": "Discover",
+        "accent": "Amazing",
+        "tail": "Products",
+
+        "subtitle":
+          "Shop the latest trends in beauty, electronics, fashion and more.",
+
+        "button": "Shop Now",
+
+        "badge": "NEW SEASON"
+      },
+
+      {
+        "title": "Upgrade",
+        "accent": "Your",
+        "tail": "Lifestyle",
+
+        "subtitle":
+          "Premium collections with modern design and high-quality products.",
+
+        "button": "Explore",
+
+        "badge": "TRENDING"
+      },
+
+      {
+        "title": "Best",
+        "accent": "Tech",
+        "tail": "Deals Online",
+
+        "subtitle":
+          "Get the newest gadgets and electronics with secure payments.",
+
+        "button": "View Products",
+
+        "badge": "HOT DEALS"
+      }
+    ],
+
+    "browseAll": "Browse All"
+  },
+
+  "products": {
+    "title": "Products",
+
+    "itemsFound": "{{count}} items found",
+
+    "loading": "Loading products…",
+
+    "noResults":
+      "No products found. Try a different search.",
+
+    "error": "Error: {{message}}"
+  },
+
+  "productDetail": {
+    "back": "Back",
+
+    "addToBasket": "Add to Basket",
+
+    "stock": "Stock: {{count}}",
+
+    "discount":
+      "{{value}}% discount applied",
+
+    "loading": "Loading…",
+
+    "error": "Error: {{message}}"
+  },
+
+  "basket": {
+    "title": "Shopping Basket",
+
+    "itemCount": "{{count}} items",
+
+    "clearAll": "Clear All",
+
+    "subtotal": "Subtotal",
+
+    "shipping": "Shipping",
+
+    "free": "FREE",
+
+    "total": "Total",
+
+    "checkout": "Proceed to Checkout",
+
+    "perUnit": "/ unit",
+
+    "empty": {
+      "title": "Your basket is empty",
+
+      "subtitle":
+        "Add some products to get started!"
+    }
+  },
+
+  "favorites": {
+    "title": "My Favorites",
+
+    "empty": {
+      "title": "No favorites yet",
+
+      "subtitle":
+        "Click the heart icon on any product to save it here"
+    }
+  },
+
+  "categories": {
+    "title": "Categories",
+
+    "all": "All",
+
+    "smartphones": "Smartphones",
+
+    "laptops": "Laptops",
+
+    "tablets": "Tablets",
+
+    "accessories": "Accessories",
+
+    "mensWatches": "Men's Watches",
+
+    "womensWatches": "Women's Watches",
+
+    "mensShoes": "Men's Shoes",
+
+    "womensShoes": "Women's Shoes",
+
+    "mensClothes": "Men's Clothing",
+
+    "womensClothes": "Women's Clothing",
+
+    "bags": "Bags",
+
+    "jewellery": "Jewellery",
+
+    "glasses": "Glasses",
+
+    "tops": "Tops",
+
+    "fragrances": "Perfume",
+
+    "skincare": "Skincare",
+
+    "beauty": "Beauty",
+
+    "homeDecoration": "Home Decoration",
+
+    "furniture": "Furniture",
+
+    "kitchen": "Kitchen",
+
+    "groceries": "Groceries",
+
+    "sports": "Sports",
+
+    "vehicle": "Vehicle",
+
+    "motorcycle": "Motorcycle",
+
+    "lighting": "Lighting"
+  }
+}

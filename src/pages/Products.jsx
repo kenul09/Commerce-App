@@ -1,5 +1,7 @@
 import { useState, useEffect, useMemo } from "react";
+import { useTranslation } from "react-i18next";
 import { getProducts } from "../Service/api";
+import { useStore } from "../context/StoreContext";
 import Navbar from "../components/Navbar/Navbar";
 import ProductCard from "../components/ProductCard/ProductCard";
 import Search from "../components/Search/Search";
@@ -7,11 +9,13 @@ import Sort from "../components/Sort/Sort";
 import styles from "./Products.module.css";
 
 const Products = () => {
+  const { t } = useTranslation();
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState("");
+  const { activeCategory } = useStore();
 
   useEffect(() => {
     (async () => {
@@ -31,6 +35,9 @@ const Products = () => {
 
   const filtered = useMemo(() => {
     let r = [...products];
+    if (activeCategory && activeCategory !== "all") {
+      r = r.filter((p) => p.category === activeCategory);
+    }
     if (search.trim()) {
       const q = search.toLowerCase();
       r = r.filter(
@@ -47,7 +54,7 @@ const Products = () => {
       case "name-asc":    r.sort((a, b) => a.title.localeCompare(b.title)); break;
     }
     return r;
-  }, [products, search, sort]);
+  }, [products, search, sort, activeCategory]);
 
   return (
     <div className={styles.page}>
@@ -56,8 +63,8 @@ const Products = () => {
       <main className={styles.main}>
         <div className={styles.pageHeader}>
           <div>
-            <h1 className={styles.pageTitle}>Products</h1>
-            <p className={styles.pageCount}>{filtered.length} items found</p>
+            <h1 className={styles.pageTitle}>{t("products.title")}</h1>
+            <p className={styles.pageCount}>{t("products.itemsFound", { count: filtered.length })}</p>
           </div>
           <div className={styles.toolbar}>
             <Search value={search} onChange={setSearch} />
@@ -68,18 +75,18 @@ const Products = () => {
         {loading && (
           <div className={styles.stateWrap}>
             <div className={styles.spinner} />
-            <p>Loading products…</p>
+            <p>{t("products.loading")}</p>
           </div>
         )}
         {error && (
           <div className={styles.stateWrap} style={{ color: "#f43f5e" }}>
-            Error: {error}
+            {t("products.error", { message: error })}
           </div>
         )}
         {!loading && !error && filtered.length === 0 && (
           <div className={styles.stateWrap}>
             <span style={{ fontSize: "3rem" }}>🔍</span>
-            <p>No products found. Try a different search.</p>
+            <p>{t("products.noResults")}</p>
           </div>
         )}
         {!loading && !error && filtered.length > 0 && (

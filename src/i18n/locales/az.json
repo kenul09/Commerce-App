@@ -1,0 +1,175 @@
+{
+  "nav": {
+    "home": "Ana Səhifə",
+    "products": "Məhsullar",
+    "favorites": "Sevimlilər",
+    "basket": "Səbət"
+  },
+
+  "home": {
+    "slides": [
+      {
+        "title": "Kəşf et",
+        "accent": "Möhtəşəm",
+        "tail": "Məhsulları",
+
+        "subtitle":
+          "Gözəllik, elektronika, moda və daha çoxunda ən son trendlər.",
+
+        "button": "İndi Al",
+
+        "badge": "YENİ MÖVSÜM"
+      },
+
+      {
+        "title": "Yüksəlt",
+        "accent": "Həyat",
+        "tail": "Tərzini",
+
+        "subtitle":
+          "Müasir dizayn və yüksək keyfiyyətli məhsullarla premium kolleksiyalar.",
+
+        "button": "Kəşf Et",
+
+        "badge": "TREND"
+      },
+
+      {
+        "title": "Ən Yaxşı",
+        "accent": "Tech",
+        "tail": "Təklifləri",
+
+        "subtitle":
+          "Ən yeni cihazlar və elektronikanı təhlükəsiz ödənişlə əldə edin.",
+
+        "button": "Məhsullara Bax",
+
+        "badge": "İSTİ TƏKLİFLƏR"
+      }
+    ],
+
+    "browseAll": "Hamısına Bax"
+  },
+
+  "products": {
+    "title": "Məhsullar",
+
+    "itemsFound": "{{count}} məhsul tapıldı",
+
+    "loading": "Məhsullar yüklənir…",
+
+    "noResults":
+      "Məhsul tapılmadı. Başqa axtarış sözü sınayın.",
+
+    "error": "Xəta: {{message}}"
+  },
+
+  "productDetail": {
+    "back": "Geri",
+
+    "addToBasket": "Səbətə Əlavə Et",
+
+    "stock": "Stok: {{count}}",
+
+    "discount":
+      "{{value}}% endirim tətbiq edildi",
+
+    "loading": "Yüklənir…",
+
+    "error": "Xəta: {{message}}"
+  },
+
+  "basket": {
+    "title": "Alış-veriş Səbəti",
+
+    "itemCount": "{{count}} məhsul",
+
+    "clearAll": "Hamısını Sil",
+
+    "subtotal": "Ara Cəm",
+
+    "shipping": "Çatdırılma",
+
+    "free": "PULSUZ",
+
+    "total": "Cəmi",
+
+    "checkout": "Ödənişə Keç",
+
+    "perUnit": "/ ədəd",
+
+    "empty": {
+      "title": "Səbətiniz boşdur",
+
+      "subtitle":
+        "Başlamaq üçün məhsul əlavə edin!"
+    }
+  },
+
+  "favorites": {
+    "title": "Sevimlilərim",
+
+    "empty": {
+      "title": "Hələ sevimli yoxdur",
+
+      "subtitle":
+        "Saxlamaq üçün məhsulun üzərindəki ürək ikonasına klikləyin"
+    }
+  },
+
+  "categories": {
+    "title": "Kateqoriyalar",
+
+    "all": "Hamısı",
+
+    "smartphones": "Smartfonlar",
+
+    "laptops": "Noutbuklar",
+
+    "tablets": "Planşetlər",
+
+    "accessories": "Aksesuarlar",
+
+    "mensWatches": "Kişi Saatları",
+
+    "womensWatches": "Qadın Saatları",
+
+    "mensShoes": "Kişi Ayaqqabısı",
+
+    "womensShoes": "Qadın Ayaqqabısı",
+
+    "mensClothes": "Kişi Geyimi",
+
+    "womensClothes": "Qadın Geyimi",
+
+    "bags": "Çantalar",
+
+    "jewellery": "Zərgərlik",
+
+    "glasses": "Eynəklər",
+
+    "tops": "Üst Geyim",
+
+    "fragrances": "Ətir",
+
+    "skincare": "Dəriyə Qayğı",
+
+    "beauty": "Kosmetika",
+
+    "homeDecoration": "Ev Dekorasiyası",
+
+    "furniture": "Mebel",
+
+    "kitchen": "Mətbəx",
+
+    "groceries": "Ərzaq",
+
+    "sports": "İdman",
+
+    "vehicle": "Avtomobil",
+
+    "motorcycle": "Motosiklet",
+
+    "lighting": "İşıqlandırma"
+  }
+}

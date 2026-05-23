@@ -1,8 +1,8 @@
 .home {
   min-height: 100vh;
-  background: #f0f2f8;
+  background: #e8f4fd;
   overflow: hidden;
-  color: #1a1a4e;
+  color: #0a2a4a;
 }
 
 .hero {
@@ -30,13 +30,12 @@
 .heroBgOverlay {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(
-      135deg,
-      rgba(240, 242, 248, 0.94),
-      rgba(235, 238, 248, 0.86),
-      rgba(238, 235, 252, 0.78)
-    );
+  background: linear-gradient(
+    135deg,
+    rgba(232, 244, 253, 0.94),
+    rgba(220, 238, 252, 0.86),
+    rgba(210, 232, 250, 0.78)
+  );
   backdrop-filter: blur(3px);
 }
 
@@ -44,10 +43,9 @@
   position: relative;
   z-index: 2;
   padding: 0 6vw;
+  padding-top: 82px;
   max-width: 620px;
-  transition:
-    opacity 0.4s ease,
-    transform 0.4s ease;
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 .contentFade {
@@ -60,10 +58,10 @@
   align-items: center;
   padding: 8px 18px;
   border-radius: 999px;
-  border: 1px solid rgba(124, 111, 247, 0.18);
-  background: rgba(124, 111, 247, 0.08);
+  border: 1px solid rgba(30, 100, 200, 0.18);
+  background: rgba(30, 100, 200, 0.08);
   backdrop-filter: blur(12px);
-  color: #7c6ff7;
+  color: #1e64c8;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -73,9 +71,8 @@
 .heroTitle {
   display: flex;
   flex-direction: column;
-  line-height: 0.9;
-  margin-bottom: 1.5rem;
-  min-height: 260px;
+  margin: 0 0 1.4rem;
+  overflow: visible;
 }
 
 .titleLine,
@@ -90,19 +87,14 @@
   font-size: clamp(4rem, 8vw, 7rem);
   font-weight: 800;
   letter-spacing: -6px;
-  color: #1a1a4e;
+  color: #0a2a4a;
 }
 
 .titleAccent {
   font-size: clamp(4rem, 8vw, 7rem);
   font-weight: 800;
   letter-spacing: -6px;
-  background: linear-gradient(
-    135deg,
-    #7c6ff7 0%,
-    #9b8bf9 45%,
-    #c084fc 100%
-  );
+  background: linear-gradient(135deg, #1e64c8 0%, #2e8ae6 45%, #56b4f5 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -118,7 +110,7 @@
 .heroSub {
   max-width: 520px;
   font-size: 1.08rem;
-  color: #6b6897;
+  color: #3a6080;
   line-height: 1.9;
   margin-bottom: 2.4rem;
 }
@@ -137,29 +129,27 @@
   padding: 1rem 2.2rem;
   border-radius: 22px;
   border: none;
-  background: #7c6ff7;
+  background: #1e64c8;
   color: white;
   font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 15px 35px rgba(124, 111, 247, 0.28);
-  transition:
-    transform 0.25s ease,
-    background 0.25s ease;
+  box-shadow: 0 15px 35px rgba(30, 100, 200, 0.28);
+  transition: transform 0.25s ease, background 0.25s ease;
 }
 
 .ctaPrimary:hover {
   transform: translateY(-3px);
-  background: #6357e8;
+  background: #1550a8;
 }
 
 .ctaSecondary {
   padding: 1rem 2.2rem;
   border-radius: 22px;
-  border: 1px solid rgba(124, 111, 247, 0.15);
+  border: 1px solid rgba(30, 100, 200, 0.15);
   background: rgba(255, 255, 255, 0.65);
   backdrop-filter: blur(18px);
-  color: #4a4878;
+  color: #0a2a4a;
   font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
@@ -168,7 +158,7 @@
 
 .ctaSecondary:hover {
   background: rgba(255, 255, 255, 0.88);
-  border-color: rgba(124, 111, 247, 0.28);
+  border-color: rgba(30, 100, 200, 0.28);
 }
 
 .counter {
@@ -176,12 +166,12 @@
   align-items: center;
   gap: 0.8rem;
   font-size: 0.78rem;
-  color: #9490b8;
+  color: #6a90b0;
 }
 
 .counterNum {
   font-weight: 700;
-  color: #4a4878;
+  color: #0a2a4a;
 }
 
 .counterTrack {
@@ -189,13 +179,13 @@
   height: 3px;
   border-radius: 999px;
   overflow: hidden;
-  background: rgba(124, 111, 247, 0.14);
+  background: rgba(30, 100, 200, 0.14);
 }
 
 .counterFill {
   height: 100%;
   border-radius: 999px;
-  background: linear-gradient(90deg, #7c6ff7, #c084fc);
+  background: linear-gradient(90deg, #1e64c8, #56b4f5);
   transition: width 0.5s ease;
 }
 
@@ -213,11 +203,9 @@
   backdrop-filter: blur(24px);
   border: 1px solid rgba(255, 255, 255, 0.82);
   box-shadow:
-    0 25px 60px rgba(26, 26, 78, 0.1),
+    0 25px 60px rgba(10, 42, 74, 0.1),
     inset 0 1px 0 rgba(255, 255, 255, 0.95);
-  transition:
-    opacity 0.4s ease,
-    transform 0.4s ease;
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 .visualFade {
@@ -228,11 +216,7 @@
 .visualGlow {
   position: absolute;
   inset: -50px;
-  background: radial-gradient(
-    circle at center,
-    rgba(124, 111, 247, 0.14),
-    transparent 70%
-  );
+  background: radial-gradient(circle at center, rgba(30, 100, 200, 0.14), transparent 70%);
   z-index: 1;
   pointer-events: none;
 }
@@ -260,13 +244,13 @@
   height: 10px;
   border-radius: 50%;
   border: none;
-  background: rgba(124, 111, 247, 0.22);
+  background: rgba(30, 100, 200, 0.22);
   cursor: pointer;
   transition: 0.25s ease;
 }
 
 .dotActive {
-  background: #7c6ff7;
+  background: #1e64c8;
   transform: scale(1.5);
 }
 
@@ -281,32 +265,30 @@
   border: none;
   background: rgba(255, 255, 255, 0.62);
   backdrop-filter: blur(18px);
-  color: #4a4878;
+  color: #0a2a4a;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 30px rgba(26, 26, 78, 0.08);
+  box-shadow: 0 10px 30px rgba(10, 42, 74, 0.08);
   transition: 0.25s ease;
 }
 
 .arrow:hover {
   transform: translateY(-50%) scale(1.08);
-  background: rgba(124, 111, 247, 0.14);
+  background: rgba(30, 100, 200, 0.14);
 }
 
 .arrowLeft  { left: 1.8rem; }
 .arrowRight { right: 1.8rem; }
 
 @media (max-width: 992px) {
-  .heroVisual {
-    width: 42vw;
-  }
+  .heroVisual { width: 42vw; }
+
+  .heroContent { padding-top: 90px; }
 
   .titleLine,
-  .titleAccent {
-    font-size: clamp(3rem, 7vw, 5rem);
-  }
+  .titleAccent { font-size: clamp(3rem, 7vw, 5rem); }
 }
 
 @media (max-width: 768px) {
@@ -319,16 +301,14 @@
 
   .heroContent {
     max-width: 100%;
-    padding: 0 1.5rem;
+    padding: 90px 1.5rem 0;
   }
 
   .heroActions  { justify-content: center; }
   .counter      { justify-content: center; }
 
   .titleLine,
-  .titleAccent {
-    font-size: clamp(3rem, 14vw, 4.5rem);
-  }
+  .titleAccent { font-size: clamp(3rem, 14vw, 4.5rem); }
 
   .heroSub { font-size: 1rem; }
 

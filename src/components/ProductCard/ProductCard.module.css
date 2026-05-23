@@ -12,7 +12,7 @@
   border: 1px solid rgba(255,255,255,0.7);
 
   box-shadow:
-    0 10px 40px rgba(15,23,42,0.05),
+    0 10px 40px rgba(10,42,74,0.05),
     inset 0 1px 0 rgba(255,255,255,0.8);
 
   transition:
@@ -24,7 +24,7 @@
   transform: translateY(-10px);
 
   box-shadow:
-    0 25px 70px rgba(99,102,241,0.12),
+    0 25px 70px rgba(30,100,200,0.12),
     inset 0 1px 0 rgba(255,255,255,0.9);
 }
 
@@ -35,7 +35,7 @@
   background:
     radial-gradient(
       circle at top,
-      rgba(139,92,246,0.12),
+      rgba(30,100,200,0.1),
       transparent 70%
     );
 
@@ -54,8 +54,8 @@
 
   background: linear-gradient(
     135deg,
-    #ede9fe,
-    #ddd6fe
+    #dceefb,
+    #c5e3f7
   );
 }
 
@@ -153,7 +153,7 @@
 
   backdrop-filter: blur(14px);
 
-  color: #a78bfa;
+  color: #2e8ae6;
 
   cursor: pointer;
 
@@ -173,8 +173,8 @@
 }
 
 .favActive {
-  background: rgba(244,63,94,0.12) !important;
-  color: #f43f5e !important;
+  background: rgba(30,100,200,0.1) !important;
+  color: #1e64c8 !important;
 }
 
 .categoryPill {
@@ -196,7 +196,7 @@
   font-size: 0.72rem;
   font-weight: 700;
 
-  color: #6366f1;
+  color: #1e64c8;
 
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -223,7 +223,7 @@
 .title {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #312e81;
+  color: #0a2a4a;
 
   line-height: 1.35;
 
@@ -232,7 +232,7 @@
 
 .desc {
   font-size: 0.92rem;
-  color: #64748b;
+  color: #3a6080;
 
   line-height: 1.8;
 
@@ -265,8 +265,8 @@
 
   background: linear-gradient(
     135deg,
-    #6366f1,
-    #8b5cf6
+    #1e64c8,
+    #2e8ae6
   );
 
   -webkit-background-clip: text;
@@ -297,7 +297,7 @@
 
   backdrop-filter: blur(12px);
 
-  color: #6366f1;
+  color: #1e64c8;
 
   cursor: pointer;
 
@@ -316,8 +316,8 @@
 
   background: linear-gradient(
     135deg,
-    #6366f1,
-    #8b5cf6
+    #1e64c8,
+    #2e8ae6
   );
 
   color: white;
@@ -334,8 +334,8 @@
 
   background: linear-gradient(
     135deg,
-    #6366f1,
-    #8b5cf6
+    #1e64c8,
+    #2e8ae6
   );
 
   color: white;

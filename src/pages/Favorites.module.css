@@ -3,13 +3,13 @@
 
 .page {
   min-height: 100vh;
-  background: #f0f2f8;
-  color: #1a1a4e;
+  background: #e8f4fd;
+  color: #0a2a4a;
   font-family: 'DM Sans', sans-serif;
 }
 
 .main {
-  padding: 96px 2rem 4rem;
+  padding: 140px 2rem 4rem;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -21,21 +21,21 @@
   justify-content: center;
   gap: 1rem;
   min-height: 50vh;
-  color: #9490b8;
+  color: #6a90b0;
   text-align: center;
 }
 
-.emptyIcon { font-size: 3rem; color: #c4c0e8; }
+.emptyIcon { font-size: 3rem; color: #90bedd; }
 
 .empty h2 {
   font-family: 'Playfair Display', serif;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #1a1a4e;
+  color: #0a2a4a;
   margin: 0;
 }
 
-.empty p { margin: 0; font-size: 0.9rem; color: #9490b8; }
+.empty p { margin: 0; font-size: 0.9rem; color: #6a90b0; }
 
 .title {
   display: flex;
@@ -45,7 +45,7 @@
   font-size: 2rem;
   font-weight: 800;
   margin: 0 0 2rem;
-  color: #1a1a4e;
+  color: #0a2a4a;
 }
 
 .count {
@@ -56,8 +56,8 @@
   height: 28px;
   padding: 0 8px;
   border-radius: 20px;
-  background: rgba(124, 111, 247, 0.12);
-  color: #7c6ff7;
+  background: rgba(30, 100, 200, 0.12);
+  color: #1e64c8;
   font-family: 'DM Sans', sans-serif;
   font-size: 0.85rem;
   font-weight: 700;

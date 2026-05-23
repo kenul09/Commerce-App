@@ -1,21 +1,18 @@
-/* Basket.module.css - şəkildəki rənglərə uyğun */
-
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@400;500;600;700&display=swap');
 
 .page {
   min-height: 100vh;
-  background: #f0f2f8;
-  color: #1a1a4e;
+  background: #e8f4fd;
+  color: #0a2a4a;
   font-family: 'DM Sans', sans-serif;
 }
 
 .main {
-  padding: 96px 2rem 4rem;
+  padding: 140px 2rem 4rem;
   max-width: 1400px;
   margin: 0 auto;
 }
 
-/* ── Empty state ── */
 .empty {
   display: flex;
   flex-direction: column;
@@ -23,23 +20,22 @@
   justify-content: center;
   gap: 1rem;
   min-height: 50vh;
-  color: #9490b8;
+  color: #6a90b0;
   text-align: center;
 }
 
-.emptyIcon { font-size: 3rem; color: #c4c0e8; }
+.emptyIcon { font-size: 3rem; color: #90bedd; }
 
 .empty h2 {
   font-family: 'Playfair Display', serif;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #1a1a4e;
+  color: #0a2a4a;
   margin: 0;
 }
 
-.empty p { margin: 0; font-size: 0.9rem; color: #9490b8; }
+.empty p { margin: 0; font-size: 0.9rem; color: #6a90b0; }
 
-/* ── Header ── */
 .header {
   display: flex;
   align-items: center;
@@ -58,7 +54,7 @@
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
   font-weight: 800;
-  color: #1a1a4e;
+  color: #0a2a4a;
 }
 
 .itemCount {
@@ -68,8 +64,8 @@
   padding: 0 10px;
   height: 28px;
   border-radius: 20px;
-  background: rgba(124, 111, 247, 0.12);
-  color: #7c6ff7;
+  background: rgba(30, 100, 200, 0.12);
+  color: #1e64c8;
   font-family: 'DM Sans', sans-serif;
   font-size: 0.85rem;
   font-weight: 700;
@@ -77,8 +73,8 @@
 
 .clearBtn {
   background: transparent;
-  border: 1.5px solid rgba(26, 26, 78, 0.18);
-  color: #9490b8;
+  border: 1.5px solid rgba(10, 42, 74, 0.18);
+  color: #6a90b0;
   font-family: 'DM Sans', sans-serif;
   font-size: 0.85rem;
   font-weight: 600;
@@ -93,7 +89,6 @@
   color: #e06b6b;
 }
 
-/* ── Layout ── */
 .content {
   display: grid;
   grid-template-columns: 1fr 340px;
@@ -105,7 +100,6 @@
   .content { grid-template-columns: 1fr; }
 }
 
-/* ── Item cards ── */
 .items {
   display: flex;
   flex-direction: column;
@@ -119,13 +113,13 @@
   background: #ffffff;
   border-radius: 16px;
   padding: 1rem 1.25rem;
-  border: 1.5px solid rgba(124, 111, 247, 0.08);
+  border: 1.5px solid rgba(30, 100, 200, 0.08);
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .item:hover {
-  border-color: rgba(124, 111, 247, 0.22);
-  box-shadow: 0 4px 20px rgba(124, 111, 247, 0.08);
+  border-color: rgba(30, 100, 200, 0.22);
+  box-shadow: 0 4px 20px rgba(30, 100, 200, 0.08);
 }
 
 .itemImg {
@@ -134,7 +128,7 @@
   border-radius: 12px;
   overflow: hidden;
   flex-shrink: 0;
-  background: #f0f2f8;
+  background: #e8f4fd;
 }
 
 .itemImg img {
@@ -152,7 +146,7 @@
   font-family: 'DM Sans', sans-serif;
   font-size: 0.95rem;
   font-weight: 600;
-  color: #1a1a4e;
+  color: #0a2a4a;
   margin: 0 0 0.25rem;
   white-space: nowrap;
   overflow: hidden;
@@ -161,16 +155,15 @@
 
 .itemPrice {
   font-size: 0.82rem;
-  color: #9490b8;
+  color: #6a90b0;
   font-weight: 500;
 }
 
-/* ── Quantity controls ── */
 .controls {
   display: flex;
   align-items: center;
   gap: 0;
-  background: #f0f2f8;
+  background: #e8f4fd;
   border-radius: 24px;
   padding: 2px;
 }
@@ -181,7 +174,7 @@
   border-radius: 50%;
   border: none;
   background: transparent;
-  color: #1a1a4e;
+  color: #0a2a4a;
   font-size: 1.1rem;
   font-weight: 700;
   cursor: pointer;
@@ -193,7 +186,7 @@
 }
 
 .qtyBtn:hover {
-  background: #7c6ff7;
+  background: #1e64c8;
   color: #ffffff;
 }
 
@@ -202,14 +195,13 @@
   text-align: center;
   font-size: 0.9rem;
   font-weight: 700;
-  color: #1a1a4e;
+  color: #0a2a4a;
 }
 
-/* ── Price & remove ── */
 .subtotal {
   font-size: 1rem;
   font-weight: 700;
-  color: #1a1a4e;
+  color: #0a2a4a;
   min-width: 72px;
   text-align: right;
 }
@@ -218,9 +210,9 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border: 1.5px solid rgba(26, 26, 78, 0.12);
+  border: 1.5px solid rgba(10, 42, 74, 0.12);
   background: transparent;
-  color: #9490b8;
+  color: #6a90b0;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -235,21 +227,20 @@
   color: #e06b6b;
 }
 
-/* ── Order summary ── */
 .summary {
   background: #ffffff;
   border-radius: 20px;
   padding: 1.5rem;
-  border: 1.5px solid rgba(124, 111, 247, 0.08);
+  border: 1.5px solid rgba(30, 100, 200, 0.08);
   position: sticky;
-  top: 88px;
+  top: 110px;
 }
 
 .summaryTitle {
   font-family: 'Playfair Display', serif;
   font-size: 1.25rem;
   font-weight: 800;
-  color: #1a1a4e;
+  color: #0a2a4a;
   margin: 0 0 1.25rem;
 }
 
@@ -258,7 +249,7 @@
   justify-content: space-between;
   align-items: center;
   font-size: 0.9rem;
-  color: #6b6897;
+  color: #3a6080;
   margin-bottom: 0.65rem;
 }
 
@@ -273,7 +264,7 @@
 
 .divider {
   height: 1.5px;
-  background: linear-gradient(90deg, rgba(124,111,247,0.15) 0%, rgba(124,111,247,0.06) 100%);
+  background: linear-gradient(90deg, rgba(30,100,200,0.15) 0%, rgba(30,100,200,0.06) 100%);
   border-radius: 2px;
   margin: 1rem 0;
 }
@@ -284,7 +275,7 @@
   align-items: center;
   font-size: 1.1rem;
   font-weight: 800;
-  color: #1a1a4e;
+  color: #0a2a4a;
   margin-bottom: 1.25rem;
 }
 
@@ -295,7 +286,7 @@
   justify-content: center;
   gap: 0.5rem;
   padding: 0.85rem 1.5rem;
-  background: #7c6ff7;
+  background: #1e64c8;
   color: #ffffff;
   border: none;
   border-radius: 14px;
@@ -307,7 +298,7 @@
 }
 
 .checkoutBtn:hover {
-  background: #6357e8;
+  background: #1550a8;
   transform: translateY(-1px);
 }
 
@@ -315,7 +306,6 @@
   transform: translateY(0);
 }
 
-/* ── Legacy / unused (keep for compatibility) ── */
 .title {
   display: flex;
   align-items: center;
@@ -324,7 +314,7 @@
   font-size: 2rem;
   font-weight: 800;
   margin: 0 0 2rem;
-  color: #1a1a4e;
+  color: #0a2a4a;
 }
 
 .count {
@@ -335,8 +325,8 @@
   height: 28px;
   padding: 0 8px;
   border-radius: 20px;
-  background: rgba(124, 111, 247, 0.12);
-  color: #7c6ff7;
+  background: rgba(30, 100, 200, 0.12);
+  color: #1e64c8;
   font-family: 'DM Sans', sans-serif;
   font-size: 0.85rem;
   font-weight: 700;

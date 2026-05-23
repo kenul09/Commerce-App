@@ -1,9 +1,14 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { useStore } from "../../context/StoreContext";
+import LangSwitcher from "../LangSwitcher/LangSwitcher";
 import styles from "./Navbar.module.css";
 
 const Navbar = () => {
-  const { basketCount, favorites } = useStore();
+  const { t } = useTranslation();
+  const { basketCount, favorites, categories, activeCategory, setActiveCategory } = useStore();
+  const location = useLocation();
+  const isProducts = location.pathname === "/products";
 
   return (
     <nav className={styles.navbar}>
@@ -12,27 +17,43 @@ const Navbar = () => {
         <span className={styles.brandText}>Commerce</span>
       </NavLink>
 
-      <div className={styles.links}>
-        {[
-          { to: "/", label: "Home" },
-          { to: "/products", label: "Products" },
-          { to: "/favorites", label: "Favorites" },
-          { to: "/basket", label: "Basket" },
-        ].map(({ to, label }) => (
-          <NavLink
-            key={to}
-            to={to}
-            end={to === "/"}
-            className={({ isActive }) =>
-              `${styles.link} ${isActive ? styles.active : ""}`
-            }
-          >
-            {label}
-          </NavLink>
-        ))}
-      </div>
+      {isProducts && categories.length > 0 ? (
+        <div className={styles.categories}>
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActiveCategory(cat)}
+              className={`${styles.catBtn} ${activeCategory === cat ? styles.catActive : ""}`}
+            >
+              {cat === "all" ? t("categories.all") : cat}
+            </button>
+          ))}
+        </div>
+      ) : (
+        <div className={styles.links}>
+          {[
+            { to: "/", label: t("nav.home") },
+            { to: "/products", label: t("nav.products") },
+            { to: "/favorites", label: t("nav.favorites") },
+            { to: "/basket", label: t("nav.basket") },
+          ].map(({ to, label }) => (
+            <NavLink
+              key={to}
+              to={to}
+              end={to === "/"}
+              className={({ isActive }) =>
+                `${styles.link} ${isActive ? styles.active : ""}`
+              }
+            >
+              {label}
+            </NavLink>
+          ))}
+        </div>
+      )}
 
       <div className={styles.icons}>
+        <LangSwitcher />
+
         <NavLink to="/basket" className={styles.iconBtn}>
           <svg className={styles.navIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
             <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />

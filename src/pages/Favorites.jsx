@@ -1,9 +1,11 @@
+import { useTranslation } from "react-i18next";
 import { useStore } from "../context/StoreContext";
 import ProductCard from "../components/ProductCard/ProductCard";
 import Navbar from "../components/Navbar/Navbar";
 import styles from "./Favorites.module.css";
 
 const Favorites = () => {
+  const { t } = useTranslation();
   const { favorites } = useStore();
 
   return (
@@ -13,13 +15,13 @@ const Favorites = () => {
         {favorites.length === 0 ? (
           <div className={styles.empty}>
             <span className={styles.emptyIcon}>❤️</span>
-            <h2>No favorites yet</h2>
-            <p>Click the heart icon on any product to save it here</p>
+            <h2>{t("favorites.empty.title")}</h2>
+            <p>{t("favorites.empty.subtitle")}</p>
           </div>
         ) : (
           <>
             <h1 className={styles.title}>
-              My Favorites
+              {t("favorites.title")}
               <span className={styles.count}>{favorites.length}</span>
             </h1>
             <div className={styles.grid}>

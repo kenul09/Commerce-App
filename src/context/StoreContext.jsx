@@ -11,12 +11,22 @@ import {
   getFavorites,
   saveFavorites,
 } from "../utils/localStorage";
+import { getProducts } from "../Service/api";
 
 const StoreContext = createContext(null);
 
 export const StoreProvider = ({ children }) => {
   const [basket, setBasket] = useState(() => getBasket());
   const [favorites, setFavorites] = useState(() => getFavorites());
+  const [categories, setCategories] = useState([]);
+  const [activeCategory, setActiveCategory] = useState("all");
+
+  useEffect(() => {
+    getProducts(100).then((data) => {
+      const unique = ["all", ...new Set(data.products.map((p) => p.category))];
+      setCategories(unique);
+    });
+  }, []);
 
   useEffect(() => { saveBasket(basket); }, [basket]);
   useEffect(() => { saveFavorites(favorites); }, [favorites]);
@@ -63,6 +73,9 @@ export const StoreProvider = ({ children }) => {
     () => ({
       basket,
       favorites,
+      categories,
+      activeCategory,
+      setActiveCategory,
       addToBasket,
       removeFromBasket,
       updateQuantity,
@@ -72,7 +85,7 @@ export const StoreProvider = ({ children }) => {
       basketTotal,
       basketCount,
     }),
-    [basket, favorites, basketTotal, basketCount]
+    [basket, favorites, categories, activeCategory, basketTotal, basketCount]
   );
 
   return <StoreContext.Provider value={value}>{children}</StoreContext.Provider>;

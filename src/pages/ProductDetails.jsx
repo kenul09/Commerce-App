@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { getProductById } from "../Service/api";
 import { useStore } from "../context/StoreContext";
 import Navbar from "../components/Navbar/Navbar";
@@ -8,6 +9,7 @@ import styles from "./ProductDetails.module.css";
 const ProductDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const { addToBasket, toggleFavorite, isFavorite } = useStore();
 
   const [product, setProduct] = useState(null);
@@ -29,8 +31,8 @@ const ProductDetails = () => {
     })();
   }, [id]);
 
-  if (loading) return <><Navbar /><div className={styles.state}>Loading…</div></>;
-  if (error)   return <><Navbar /><div className={`${styles.state} ${styles.err}`}>Error: {error}</div></>;
+  if (loading) return <><Navbar /><div className={styles.state}>{t("productDetail.loading")}</div></>;
+  if (error)   return <><Navbar /><div className={`${styles.state} ${styles.err}`}>{t("productDetail.error", { message: error })}</div></>;
   if (!product) return null;
 
   const fav = isFavorite(product.id);
@@ -44,7 +46,7 @@ const ProductDetails = () => {
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="16" height="16">
             <path d="M19 12H5M12 5l-7 7 7 7"/>
           </svg>
-          Back
+          {t("productDetail.back")}
         </button>
 
         <div className={styles.content}>
@@ -76,12 +78,12 @@ const ProductDetails = () => {
             <div className={styles.stats}>
               <span className={styles.price}>${product.price}</span>
               <span className={styles.rating}>★ {product.rating}</span>
-              <span className={styles.stock}>Stock: {product.stock}</span>
+              <span className={styles.stock}>{t("productDetail.stock", { count: product.stock })}</span>
             </div>
 
             {product.discountPercentage > 0 && (
               <div className={styles.discount}>
-                🏷 {product.discountPercentage.toFixed(1)}% discount applied
+                🏷 {t("productDetail.discount", { value: product.discountPercentage.toFixed(1) })}
               </div>
             )}
 
@@ -92,7 +94,7 @@ const ProductDetails = () => {
                   <line x1="3" y1="6" x2="21" y2="6"/>
                   <path d="M16 10a4 4 0 01-8 0"/>
                 </svg>
-                Add to Basket
+                {t("productDetail.addToBasket")}
               </button>
               <button
                 className={`${styles.btnFav} ${fav ? styles.btnFavActive : ""}`}
